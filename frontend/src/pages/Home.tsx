@@ -49,6 +49,19 @@ const Home = () => {
       <Typography variant="h3" style={{ marginTop: 30, marginBottom: 40 }}>
         My insurance
       </Typography>
+      <button
+          style={{
+            marginTop: 20,
+            padding: 20,
+            fontSize: "120%",
+            borderRadius: 20,
+          }}
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
+          Add new user
+        </button>
       <Box style={{ margin: 20 }}>
         <Table>
           <Thead>
@@ -103,19 +116,7 @@ const Home = () => {
             onCustomerClicked={setCustomerToEdit}
           />
         )}
-        <button
-          style={{
-            marginTop: 20,
-            padding: 20,
-            fontSize: "120%",
-            borderRadius: 20,
-          }}
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-        >
-          Add new user
-        </button>
+        
 
         {isOpen && (
           <AddEditCustomer
